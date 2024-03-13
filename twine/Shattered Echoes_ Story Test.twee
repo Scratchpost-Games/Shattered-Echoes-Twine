@@ -1,0 +1,473 @@
+:: StoryTitle
+Shattered Echoes: Story Test
+
+
+:: StoryData
+{
+  "ifid": "a2a88c28-1391-4b54-9baf-c504974de654",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Anger {"position":"1200,700","size":"100,100"}
+(set: $curSpiritComp to "the powerful bull 🐂")(if: (visited:"Anger Puzzle 1") is true and (visited:"Anger Puzzle 2") is true and (visited:"Anger Puzzle 3") is true and (visited:"Anger Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "anger"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "anger")[''Flowing River''
+
+Color has returned to this area and it feels alive. The river flows again and the water is clean and fresh.](else:)[''Dried Up River''
+
+(if: visits is 1)[You arrive at the river. Or better said, what used to be a river. The water level is low, the flow is nearly gone, and the water is polluted. As soon as you enter the area, the bridge you walked over collapses. In the distance you see several areas with pillars in them. In a nearby meadow, you see a bull pacing around. It seems agitated. You approach it slowly. Once it sees you, you freeze, scared that it might decide to attack you. However, the bull seems to calm down somewhat in your presence. You cautiously reach out to pet it. The moment you touch it, it starts glowing in a blue light. The bull morphs into a ball of blue light, which quickly zooms towards you and collides with your chest. Then it's gone. You feel a bit different.(set: $companions to it + (ds: "bull"))](else:)[You are back at the river, which is still partially dried up and polluted. In the distance you see several areas with pillars in them.]]
+
+[[Wander to pillar area 1|Anger Puzzle 1]]
+
+[[Wander to pillar area 2|Anger Puzzle 2]]
+
+[[Wander to pillar area 3|Anger Puzzle 3]]
+
+[[Wander to pillar area 4|Anger Puzzle 4]]
+
+(if: $areasCompleted contains "anger")[Water flow has returned where the bridge used to be.
+
+[[Evoke the otter and swim across.|City Park]]]
+
+(set: $curArea to "the river")
+
+
+:: Anger Puzzle 1 {"position":"1200,825","size":"100,100"}
+''Puzzle 1''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist looking at a happy family.
+
+//“It’s not fair that others have normal and such loving families.”//
+
+[[Return to $curArea.|Anger]]]
+
+
+:: Anger Puzzle 2 {"position":"1325,825","size":"100,100"}
+''Puzzle 1''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) Our protagonist stands with their backpack in their hands in front of their school, the clock shows 18:00. It is already dark outside.
+
+//“I wish that was the only time my parents forgot to pick me up. It wasn’t.”//
+
+[[Return to $curArea.|Anger]]]
+
+
+:: Anger Puzzle 3 {"position":"1325,950","size":"100,100"}
+''Puzzle 1''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist sitting in front of a desk. Their diary lies on the desk, names have been scratched out.
+
+//“Ah, yes. This was after a beat up. I imagined their names were them and tried to scratch them out as hard as I could.”//
+
+[[Return to $curArea.|Anger]]]
+
+
+:: Anger Puzzle 4 {"position":"1325,1075","size":"100,100"}
+''Puzzle 4''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) Our protagonist’s name gets called to receive their diploma. They get up excitedly to shake hands with the professor. On the podium, we get a shot of the audience. Three empty chairs greet us.
+
+(link:"“How excited I was. I finally did it. I had achieved something! But of course my parents were not there to celebrate with me, they never showed up to stuff that was important to me. It’s infuriating.”")[(t8n:"dissolve")(show:?section2)]|section-2)[//“How excited I was. I finally did it. I had achieved something! But of course my parents were not there to celebrate with me, they never showed up to stuff that was important to me. It’s infuriating.”//
+
+(IMAGE) When our protagonist gets home, disappointed, their parents do have a cake prepared congratulating them on their graduation.
+
+//“They tried their best though and did remind me that they actually love me.”//
+
+Or
+
+(IMAGE) When our protagonist looks around in the crowd, they find their best friends sticking up their thumbs to them.
+
+//“But at least I had my chosen family. They’ll always be there for me.”//
+
+[[“It’s time to let go of the anger, or it might become the only thing I feel. The past is in the past and I cannot change it.”|Anger]]]]
+
+
+:: Anxiety {"position":"800,700","size":"100,100"}
+(set: $curSpiritComp to "the swift rabbit 🐇")(if: (visited:"Anxiety Puzzle 1") is true and (visited:"Anxiety Puzzle 2") is true and (visited:"Anxiety Puzzle 3") is true and (visited:"Anxiety Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "anxiety"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "anxiety")[''Film Studio''
+
+Color has returned to this area and it feels alive.](else:)[''Abondoned Film Studio''
+
+(if: visits is 1)[You enter an abondoned film studio, dark and gloomy. As soon as you enter the lot, the gates that you passed through slam shut behind you. In the distance you see several areas with pillars in them. You hear something rustle in some nearby boxes of film equipment. You open the box and find in it a small rabbit. You reach out to pet it. The moment you touch it, it starts glowing in a blue light. The rabbit morphs into a ball of blue light, which quickly zooms towards you and collides with your chest. Then it's gone. You feel a bit different.(set: $companions to it + (ds: "rabbit"))](else:)[You are back at the centre lot of the film studio. It is still dark and menacing. In the distance you see several areas with pillars in them.]]
+
+[[Wander to pillar area 1|Anxiety Puzzle 1]]
+
+[[Wander to pillar area 2|Anxiety Puzzle 2]]
+
+[[Wander to pillar area 3|Anxiety Puzzle 3]]
+
+[[Wander to pillar area 4|Anxiety Puzzle 4]]
+
+(if: $areasCompleted contains "anxiety")[The gates that lead back to the city park have reopened.
+
+[[Return to the city park.|City Park]]]
+
+(set: $curArea to "film studio")
+
+
+:: Anxiety Puzzle 1 {"position":"600,900","size":"100,100"}
+''Puzzle 1''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) A teenager runs through a busy school hallway, pursued by a small group of mean looking students.
+
+//“Sometimes when I round a corner, I’m still afraid I’ll get ambushed. No matter how much time passes, that feeling never fades.”//
+
+[[Return to $curArea.|Anxiety]]]
+
+
+:: Anxiety Puzzle 2 {"position":"725,900","size":"100,100"}
+''Puzzle 2''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) A person is sitting at a desk, staring at an empty piece of paper with a sad look in their eyes.
+
+//“If only I would have been great at making something, maybe they would have liked me. But I was too afraid to even try.”//
+
+[[Return to $curArea.|Anxiety]]]
+
+
+:: Anxiety Puzzle 3 {"position":"600,1025","size":"100,100"}
+''Puzzle 3''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) A teenager stands amid a dancing crowd at a school dance. They look profoundly uncomfortable.
+
+//“I was always very self-conscious around others, trying to fit in, behave like I thought they wanted me to. It never worked.”//
+
+[[Return to $curArea.|Anxiety]]]
+
+
+:: Anxiety Puzzle 4 {"position":"725,1025","size":"100,100"}
+''Puzzle 4''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) A teenager stands in front of a classroom, looking embarrassed and uncomfortable. Behind them is a screen showing a presentation. A few students in the group are snickering and making fun.
+
+(link:"“Possibly one of the worst days of my life. My fears of not being good enough, of not being liked, all being confirmed in that instant.”")[(t8n:"dissolve")(show:?section2)]|section-2)[//“Possibly one of the worst days of my life. My fears of not being good enough, of not being liked, all being confirmed in that instant.”//
+
+(IMAGE) A teenager sits at their desk in the classroom, tears running from their eyes. A teacher sits next to them, comforting them.
+
+//“I broke down after class was over. I’m glad my teacher noticed it and helped me get in touch with a student counselor. Things became better after that.”//
+
+[[“Fear has controlled my life for far too long now. It has been there every moment of every day, looming over me and holding me back from living the life that I want to live. I have to let go and accept myself for who I am.”|Anxiety]]]]
+
+
+:: City Park {"position":"1000,500","size":"100,100"}
+''The City Park''
+
+(if: $areasToComplete is 0)[The park is bright. Brighter than you've ever seen it before. In fact, it grows more bright with every passing moment. Eventually, you see nothing around you except a white void.
+
+[[What is happening|Hospital]]](else:)[(if: visits is 1)[You arrive at a small park in the center of the city. Suddenly, an intense memory strikes you. You panic. You drop to your knees as your emotions overwhelm you. You see blue light again, this time bursting from your body and scattering away to neighboring areas. ](if: $areasCompleted is (ds: "joy"))[The small park at the center of the city is abondoned, save for a few shadowy figures moving about in the distance. You feel it would be best to not alert them to your presence. A tree with a broken down treehouse stands in the middle of the park.](else:)[The small park at the center of the city is feels a bit more alive. The treehouse has been partially fixed. ](if: $areasCompleted contains "anxiety")[The area seems less gloomy and you no longer feel afraid that something is going to jump at you from the bushes. ](if: $areasCompleted contains "anger")[The little ponds in the park are filled with fresh, clean water again. ](if: $areasCompleted contains "loneliness")[The overgrown vines and bushes in the park have been neatly trimmed. ](if: $areasCompleted contains "grief")[The lights in the treehouse are on, and so are the lights in the city surrounding the park. ]
+
+The park is surrounded by five other areas: an amusement park, a film studio, a river, some ruins, and a power plant.
+
+[[Walk to the amusement park.|Joy]]
+
+[[Walk to the film studio.|Anxiety]]
+
+[[Walk to the river.|Anger]]
+
+[[Walk to the ruins.|Loneliness]]
+
+[[Walk to the power plant.|Grief]]]
+
+
+:: Debug Startup [debug-startup] {"position":"600,100","size":"100,100"}
+{
+}
+
+
+:: End {"position":"1400,300","size":"100,100"}
+The End.
+
+
+:: Final choice {"position":"1200,300","size":"100,100"}
+A memory flashes through your mind. You remember what happened before you got here! There was an accident. A car going in the opposite direction swerving towards yours, headlights blinding you. A loud crashing noise, sharp pain, and everything turning black. You hear a very faint beeping sound in front of you. It grows louder. It is the sound of a heart rate monitor. Behind you, you can hear the faint sounds of the city square again, with its chirping birds and gentle rustling wind.
+
+[[Walk forward, towards the beeping sound.|End]]
+
+[[Turn around, back to the square.|End]]
+
+
+:: Grief {"position":"1200,500","size":"100,100"}
+(set: $curSpiritComp to "the keen raven 🐦‍⬛")(if: (visited:"Grief Puzzle 1") is true and (visited:"Grief Puzzle 2") is true and (visited:"Grief Puzzle 3") is true and (visited:"Grief Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "grief"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "grief")[''Power Plant''
+
+Color has returned to this area and it feels alive. The machinery of the plant is humming softly and the lights are back on.](else:)[''Abandoned Power Plant''
+
+(if: visits is 1)[You enter the main hall of an abandoned power plant. As soon as you enter the buiding, the door slams behind you. It is dark, but you manage to make out several areas with pillars in them in the distance. You hear the call of a bird coming from the direction of the hall's high ceiling. Looking up, you spot a black raven, regarding you from atop a high ceiling beam. It swoops down and lands on the nearby reception desk. You walk towards it and reach out your hand. The moment you touch it, it starts glowing in a blue light. The raven morphs into a ball of blue light, which quickly zooms towards you and collides with your chest. Then it's gone. You feel a bit different.(set: $companions to it + (ds: "raven"))](else:)[You are back at the main hall of the power plant. It is dark and the power is off. In the distance you see several areas with pillars in them.]]
+
+[[Wander to pillar area 1|Grief Puzzle 1]]
+
+[[Wander to pillar area 2|Grief Puzzle 2]]
+
+[[Wander to pillar area 3|Grief Puzzle 3]]
+
+[[Wander to pillar area 4|Grief Puzzle 4]]
+
+(if: $areasCompleted contains "grief")[The door of the building has reopened.
+
+[[Return to the city park.|City Park]]]
+
+(set: $curArea to "the main hall")
+
+
+:: Grief Puzzle 1 {"position":"1400,500","size":"100,100"}
+''Puzzle 1''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist sitting in a car, almost built in by boxes. Another child stares at the car, a sad look in their eyes.
+
+//“This was one of the first friends I made. Sadly, we had to move again.”//
+
+[[Return to $curArea.|Grief]]]
+
+
+:: Grief Puzzle 2 {"position":"1525,500","size":"100,100"}
+''Puzzle 2''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist sitting next to a gravestone. The words “Loving mother and grandma” written in the middle of the tombstone.
+
+//“I miss her everyday. When I think about her, I sometimes smell the apple pie we used to make.”//
+
+[[Return to $curArea.|Grief]]]
+
+
+:: Grief Puzzle 3 {"position":"1400,625","size":"100,100"}
+''Puzzle 3''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist with a photo-album on their lap.
+
+//“Sometimes I wonder how different my life would have been if I wasn’t so.. like me.”//
+
+[[Return to $curArea.|Grief]]]
+
+
+:: Grief Puzzle 4 {"position":"1525,625","size":"100,100"}
+''Puzzle 4''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist at the vet, our beloved pet laying on the table in the middle of the room. The vet places a hand on our protagonist’s shoulder, as a tear escapes our protagonist’s eye.
+
+(link:"“I remember my heart shattering, losing my oldest friend. For a time my only friend”")[(t8n:"dissolve")(show:?section2)]|section-2)[//“I remember my heart shattering, losing my oldest friend. For a time my only friend”//
+
+(IMAGE) We see our protagonist at the vet, our beloved pet laying on the table in the middle of the room. The vet places a hand on our protagonist’s shoulder, as a tear escapes our protagonist’s eye.
+
+//“But my friend lives on in their children and my heart. They’ll never really leave me”//
+
+[[“I hope they’re in a better place. I’ll always love them, never forget them. But I can’t stay stuck in the pain. They would’ve wanted me to fight on. So I will.”|Grief]]]]
+
+
+:: Header [header] {"position":"1000,100","size":"100,100"}
+{(align:"==>")[Companions: 
+(if: $companions contains "otter")[🦦]
+(if: $companions contains "rabbit")[🐇]
+(if: $companions contains "bull")[🐂]
+(if: $companions contains "wolf")[🐺]
+(if: $companions contains "raven")[🐦‍⬛]
+]}
+
+
+:: Hospital {"position":"1000,300","size":"100,100"}
+(if: $areasCompleted contains "hospital")[''Power Plant''
+
+Color has returned to this area and it feels alive. The machinery of the plant is humming softly and the lights are back on.](else:)[''Hospital''
+
+(if: visits is 1)[You wake up in a hospital. Its sterile white walls are somehow comforting and unsettling at the same time. In the distance you see several areas with pillars in them.](else:)[You are back at the main hall of the hospital. Its sterile white walls are somehow comforting and unsettling at the same time. In the distance you see several areas with pillars in them.]]
+
+[[Complete all puzzles and finish hospital|Final choice]]
+
+(if: $areasCompleted contains "hospital")[The door of the building has reopened.
+
+[[Return to the city park.|City Park]]]
+
+(set: $curArea to "the main hall")
+
+
+:: Intro Puzzle {"position":"400,400","size":"100,100"}
+You enter a puzzle area. There are pillars all over the place, and what seems like a door that is currently locked. You evoke your spirit companion ($curSpiritComp) to help you solve this puzzle.
+
+(link:"You solve the puzzle and the door unlocks. You enter it.")[(t8n:"dissolve")(show:?prevline,?puzzle-part1)]|prevline)[You solve the puzzle and the door unlocks. You enter it.]
+
+
+:: Joy {"position":"800,500","size":"100,100"}
+(set: $curSpiritComp to "the magnificent otter 🦦")(if: (visited:"Joy Puzzle 1") is true and (visited:"Joy Puzzle 2") is true and (visited:"Joy Puzzle 3") is true and (visited:"Joy Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "joy"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "joy")[''Vibrant Amusement Park''
+
+The rides are running again! Color has returned to this area and it feels alive.](else:)[''Dilapidated Amusement Park''
+
+(if: $companions does not contain "otter")[The otter leads you to a dilapidated amusement park. The rides are rusted and look like they haven't been used in a long time. In the distance you see several areas with pillars in them. The otter approaches you. You kneel down, beckoning it to come closer. It does. You reach out to pet it. The moment you touch the otter, it starts glowing in a blue light. You withdraw your hand, startled. The otter morphs into a ball of blue light, which quickly zooms towards you and collides with your chest. Then it's gone. You look around, confused. You feel a bit different.(set: $companions to it + (ds: "otter"))](else:)[You are back at the amusement park. The rides are rusted and look like they haven't been used in a long time. In the distance you see several areas with pillars in them.]]
+
+[[Wander to pillar area 1|Joy Puzzle 1]]
+
+[[Wander to pillar area 2|Joy Puzzle 2]]
+
+[[Wander to pillar area 3|Joy Puzzle 3]]
+
+[[Wander to pillar area 4|Joy Puzzle 4]]
+
+(if: $areasCompleted contains "joy")[A new path has revealed itself, leading out of the amusement park.
+
+[[Take the path to the next area.|City Park]]]
+
+(set: $curArea to "amusement park")
+
+
+:: Joy Puzzle 1 {"position":"600,400","size":"100,100"}
+''Puzzle 1''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) A young child holds a newborn baby in their arms, staring at it in wonder. Around them, festive items such as balloons are visible.
+
+//“I can still see Mom and Dad coming in through the front door, Mom holding little Alex in her arms. Everyone started cheering and congratulating them. Later, I got to hold them too. I was so excited. I thought that I would never have to be alone ever again.”//
+
+[[Return to $curArea.|Joy]]]
+
+
+:: Joy Puzzle 2 {"position":"600,500","size":"100,100"}
+''Puzzle 2''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) An older woman and a young child are standing in a kitchen at the countertop. On top of it are baking ingredients for a pie and items such as a rolling pin, mixer, etc. Both people are smiling broadly.
+
+//“Grandma’s pies really were the best. She used to say that it was because of the love baked into them. I remember being covered in flour and the entire house smelling like pie when I helped her make them.”//
+
+[[Return to $curArea.|Joy]]]
+
+
+:: Joy Puzzle 3 {"position":"600,600","size":"100,100"}
+''Puzzle 3''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) A teenager wearing skiing gear lies in the snow, in the mountains. They’ve just fallen down, skis and poles lying beside them. They are being helped up by one of their parents.
+
+//“It’s a miracle that I didn’t break any bones during that vacation. It was great spending some time together as a family.”//
+
+[[Return to $curArea.|Joy]]]
+
+
+:: Joy Puzzle 4 {"position":"600,700","size":"100,100"}
+''Puzzle 4''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) A child unwraps a box (with holes in it) and sees a rabbit inside. The child’s eyes are wide and they are beaming.
+
+(link:"\"After months of pleading with my parents, I finally got what I wanted more than anything in the world. It was love at first sight.\"")[(t8n:"dissolve")(show:?section2)]|section-2)[//“After months of pleading with my parents, I finally got what I wanted more than anything in the world. It was love at first sight.”//
+
+(IMAGE) A child lies on the grass on a sunny day, reading a book. A rabbit is nestled up beside them.
+
+“We became inseparable, going everywhere together. We took care of each other.”
+
+[[Return to $curArea.|Joy]]]]
+
+
+:: Loneliness {"position":"1000,700","size":"100,100"}
+(set: $curSpiritComp to "the wise wolf 🐺")(if: (visited:"Loneliness Puzzle 1") is true and (visited:"Loneliness Puzzle 2") is true and (visited:"Loneliness Puzzle 3") is true and (visited:"Loneliness Puzzle 4") is true and (visited:"Loneliness Puzzle 5") is true)[(set: $areasCompleted to it + (ds: "loneliness"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "loneliness")[''Lost Ruins''
+
+Color has returned to this area and it feels alive.](else:)[''Overgrown Lost Ruins''
+
+(if: visits is 1)[You enter an overgrown area filled with ruins. As soon as you enter the area, the path behind you gets blocked by vines, quickly growing from the surrounding trees. In the distance you see several areas with pillars in them. You look at the ruins and freeze. On top of the nearest ruin stands a wolf. It sees you, leaps from the ruin and pads towards you. It sits down in front of you, looking at you expectantly. Once you calm down a bit and realize that it probably does not want to attack you, you reach out to pet it. The moment you touch it, it starts glowing in a blue light. The wolf morphs into a ball of blue light, which quickly zooms towards you and collides with your chest. Then it's gone. You feel a bit different.(set: $companions to it + (ds: "wolf"))](else:)[You are back at the overgrown area filled with ruins. In the distance you see several areas with pillars in them.]]
+
+[[Wander to pillar area 1|Loneliness Puzzle 1]]
+
+[[Wander to pillar area 2|Loneliness Puzzle 2]]
+
+[[Wander to pillar area 3|Loneliness Puzzle 3]]
+
+[[Wander to pillar area 4|Loneliness Puzzle 4]]
+
+[[Wander to pillar area 5|Loneliness Puzzle 5]]
+
+(if: $areasCompleted contains "loneliness")[The vines that previously blocked your path back to the city park have retreated.
+
+[[Return to the city park.|City Park]]]
+
+(set: $curArea to "lost ruins")
+
+
+:: Loneliness Puzzle 1 {"position":"900,900","size":"100,100"}
+''Puzzle 1''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see a smaller version of our protagonist, surrounded by boxes.
+
+//“We always moved around a lot. So I never really could make friends.”//
+
+[[Return to $curArea.|Loneliness]]]
+
+
+:: Loneliness Puzzle 2 {"position":"1025,900","size":"100,100"}
+''Puzzle 2''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist sitting in a busy canteen, alone at a table, while every other table is filled with people.
+
+//“This was my everyday for a long while. I still don’t know why no one would sit with me.”//
+
+[[Return to $curArea.|Loneliness]]]
+
+
+:: Loneliness Puzzle 3 {"position":"900,1025","size":"100,100"}
+''Puzzle 3''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist sitting on their bed, staring outside a window where a group of people is playing with water guns and laughing.
+
+//“It was hard hearing the laughter of people having fun, while I was.. always in my room.”//
+
+[[Return to $curArea.|Loneliness]]]
+
+
+:: Loneliness Puzzle 4 {"position":"1025,1025","size":"100,100"}
+''Puzzle 4''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see a group of children, everyone has a birthday invitation in their hands, except our protagonist.
+
+//“I had foreseen this happening, but it still hurt.”//
+
+[[Return to $curArea.|Loneliness]]]
+
+
+:: Loneliness Puzzle 5 {"position":"1150,1025","size":"100,100"}
+''Puzzle 5''
+(display: "Intro Puzzle")
+
+|puzzle-part1)[(IMAGE) We see our protagonist sitting on a bed, surrounded by boxes, a phone in their hands. 0 notifications.
+
+(link:"“I remember this. I felt so happy to finally have grown enough to live on my own, but nobody had warned me of how hard the sudden loneliness could settle in.”")[(t8n:"dissolve")(show:?section2)]|section-2)[//“I remember this. I felt so happy to finally have grown enough to live on my own, but nobody had warned me of how hard the sudden loneliness could settle in.”//
+
+(IMAGE) After looking at their phone for a little while, there is a knock on our protagonist’s door. They get invited to hang around for a drink in the main area of the dorms. 
+
+//“But closing one chapter opened up another one. I made some new, maybe even better friends that day”//
+
+[[“I can’t just sit around and wait for people to always reach out to me. Maybe I will sign up for an after school club.”|Loneliness]]]]
+
+
+:: Start {"position":"800,300","size":"100,100"}
+''Start Area''
+
+You wake up. You do not know what happened to you or where you are. 
+You stand up and look around. The world doesn’t look quite right.
+
+(link:"\"Where am I? How did I get here?\"")[(t8n:"dissolve")(show:?discover-creature)]|discover-creature)[//"Where am I? How did I get here?"//
+
+You look around once again and spot a small creature scurrying around. It appears to be an otter. It approaches you and makes a little circle around you, after which it moves to a direction, beckoning you to follow them.
+
+[[“You want me to follow you, little one?”|Joy]]]
+
+
+:: Startup [startup] {"position":"800,100","size":"100,100"}
+{
+(set: $companions to (ds:))
+
+(set: $areasCompleted to (ds:))
+
+(set: $areasToComplete to 5)
+}
