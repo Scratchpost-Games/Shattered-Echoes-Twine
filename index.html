@@ -18,7 +18,7 @@ You stand up and look around. The world doesn’t look quite right.
 
 You look around once again and spot a small creature scurrying around. It appears to be an otter. It approaches you and makes a little circle around you, after which it moves to a direction, beckoning you to follow them.
 
-[[“You want me to follow you, little one?”|Joy]]]</tw-passagedata><tw-passagedata pid="2" name="Anxiety" tags="" position="800,700" size="100,100">(set: $curSpiritComp to &quot;the swift rabbit 🐇&quot;)(if: (visited:&quot;Anxiety Puzzle 1&quot;) is true and (visited:&quot;Anxiety Puzzle 2&quot;) is true and (visited:&quot;Anxiety Puzzle 3&quot;) is true and (visited:&quot;Anxiety Puzzle 4&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;anxiety&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;anxiety&quot;)[&#39;&#39;Film Studio&#39;&#39;
+[[“You want me to follow you, little one?”|Joy]]]</tw-passagedata><tw-passagedata pid="2" name="Anxiety" tags="" position="800,700" size="100,100">(set: $curSpiritComp to &quot;the swift rabbit 🐇&quot;)(if: $areasCompleted does not contain &quot;anxiety&quot; and (visited:&quot;Anxiety Puzzle 1&quot;) is true and (visited:&quot;Anxiety Puzzle 2&quot;) is true and (visited:&quot;Anxiety Puzzle 3&quot;) is true and (visited:&quot;Anxiety Puzzle 4&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;anxiety&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;anxiety&quot;)[&#39;&#39;Film Studio&#39;&#39;
 
 Color has returned to this area and it feels alive.](else:)[&#39;&#39;Abondoned Film Studio&#39;&#39;
 
@@ -36,7 +36,7 @@ Color has returned to this area and it feels alive.](else:)[&#39;&#39;Abondoned 
 
 [[Return to the city park.|City Park]]]
 
-(set: $curArea to &quot;film studio&quot;)</tw-passagedata><tw-passagedata pid="3" name="Loneliness" tags="" position="1000,700" size="100,100">(set: $curSpiritComp to &quot;the wise wolf 🐺&quot;)(if: (visited:&quot;Loneliness Puzzle 1&quot;) is true and (visited:&quot;Loneliness Puzzle 2&quot;) is true and (visited:&quot;Loneliness Puzzle 3&quot;) is true and (visited:&quot;Loneliness Puzzle 4&quot;) is true and (visited:&quot;Loneliness Puzzle 5&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;loneliness&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;loneliness&quot;)[&#39;&#39;Lost Ruins&#39;&#39;
+(set: $curArea to &quot;film studio&quot;)</tw-passagedata><tw-passagedata pid="3" name="Loneliness" tags="" position="1000,700" size="100,100">(set: $curSpiritComp to &quot;the wise wolf 🐺&quot;)(if: $areasCompleted does not contain &quot;loneliness&quot; and (visited:&quot;Loneliness Puzzle 1&quot;) is true and (visited:&quot;Loneliness Puzzle 2&quot;) is true and (visited:&quot;Loneliness Puzzle 3&quot;) is true and (visited:&quot;Loneliness Puzzle 4&quot;) is true and (visited:&quot;Loneliness Puzzle 5&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;loneliness&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;loneliness&quot;)[&#39;&#39;Lost Ruins&#39;&#39;
 
 Color has returned to this area and it feels alive.](else:)[&#39;&#39;Overgrown Lost Ruins&#39;&#39;
 
@@ -56,7 +56,7 @@ Color has returned to this area and it feels alive.](else:)[&#39;&#39;Overgrown 
 
 [[Return to the city park.|City Park]]]
 
-(set: $curArea to &quot;lost ruins&quot;)</tw-passagedata><tw-passagedata pid="4" name="Anger" tags="" position="1200,700" size="100,100">(set: $curSpiritComp to &quot;the powerful bull 🐂&quot;)(if: (visited:&quot;Anger Puzzle 1&quot;) is true and (visited:&quot;Anger Puzzle 2&quot;) is true and (visited:&quot;Anger Puzzle 3&quot;) is true and (visited:&quot;Anger Puzzle 4&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;anger&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;anger&quot;)[&#39;&#39;Flowing River&#39;&#39;
+(set: $curArea to &quot;lost ruins&quot;)</tw-passagedata><tw-passagedata pid="4" name="Anger" tags="" position="1200,700" size="100,100">(set: $curSpiritComp to &quot;the powerful bull 🐂&quot;)(if: $areasCompleted does not contain &quot;anger&quot; and (visited:&quot;Anger Puzzle 1&quot;) is true and (visited:&quot;Anger Puzzle 2&quot;) is true and (visited:&quot;Anger Puzzle 3&quot;) is true and (visited:&quot;Anger Puzzle 4&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;anger&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;anger&quot;)[&#39;&#39;Flowing River&#39;&#39;
 
 Color has returned to this area and it feels alive. The river flows again and the water is clean and fresh.](else:)[&#39;&#39;Dried Up River&#39;&#39;
 
@@ -74,7 +74,7 @@ Color has returned to this area and it feels alive. The river flows again and th
 
 [[Evoke the otter and swim across.|City Park]]]
 
-(set: $curArea to &quot;the river&quot;)</tw-passagedata><tw-passagedata pid="5" name="Grief" tags="" position="1200,500" size="100,100">(set: $curSpiritComp to &quot;the keen raven 🐦‍⬛&quot;)(if: (visited:&quot;Grief Puzzle 1&quot;) is true and (visited:&quot;Grief Puzzle 2&quot;) is true and (visited:&quot;Grief Puzzle 3&quot;) is true and (visited:&quot;Grief Puzzle 4&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;grief&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;grief&quot;)[&#39;&#39;Power Plant&#39;&#39;
+(set: $curArea to &quot;the river&quot;)</tw-passagedata><tw-passagedata pid="5" name="Grief" tags="" position="1200,500" size="100,100">(set: $curSpiritComp to &quot;the keen raven 🐦‍⬛&quot;)(if: $areasCompleted does not contain &quot;grief&quot; and (visited:&quot;Grief Puzzle 1&quot;) is true and (visited:&quot;Grief Puzzle 2&quot;) is true and (visited:&quot;Grief Puzzle 3&quot;) is true and (visited:&quot;Grief Puzzle 4&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;grief&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;grief&quot;)[&#39;&#39;Power Plant&#39;&#39;
 
 Color has returned to this area and it feels alive. The machinery of the plant is humming softly and the lights are back on.](else:)[&#39;&#39;Abandoned Power Plant&#39;&#39;
 
@@ -96,7 +96,7 @@ Color has returned to this area and it feels alive. The machinery of the plant i
 
 [[Walk forward, towards the beeping sound.|End]]
 
-[[Turn around, back to the square.|End]]</tw-passagedata><tw-passagedata pid="7" name="Joy" tags="" position="800,500" size="100,100">(set: $curSpiritComp to &quot;the magnificent otter 🦦&quot;)(if: (visited:&quot;Joy Puzzle 1&quot;) is true and (visited:&quot;Joy Puzzle 2&quot;) is true and (visited:&quot;Joy Puzzle 3&quot;) is true and (visited:&quot;Joy Puzzle 4&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;joy&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;joy&quot;)[&#39;&#39;Vibrant Amusement Park&#39;&#39;
+[[Turn around, back to the square.|End]]</tw-passagedata><tw-passagedata pid="7" name="Joy" tags="" position="800,500" size="100,100">(set: $curSpiritComp to &quot;the magnificent otter 🦦&quot;)(if: $areasCompleted does not contain &quot;joy&quot; and (visited:&quot;Joy Puzzle 1&quot;) is true and (visited:&quot;Joy Puzzle 2&quot;) is true and (visited:&quot;Joy Puzzle 3&quot;) is true and (visited:&quot;Joy Puzzle 4&quot;) is true)[(set: $areasCompleted to it + (ds: &quot;joy&quot;))(set: $areasToComplete to it - 1)](if: $areasCompleted contains &quot;joy&quot;)[&#39;&#39;Vibrant Amusement Park&#39;&#39;
 
 The rides are running again! Color has returned to this area and it feels alive.](else:)[&#39;&#39;Dilapidated Amusement Park&#39;&#39;
 
@@ -247,28 +247,28 @@ The park is surrounded by five other areas: an amusement park, a film studio, a 
 
 //“But closing one chapter opened up another one. I made some new, maybe even better friends that day”//
 
-[[“I can’t just sit around and wait for people to always reach out to me. Maybe I will sign up for an after school club.”|Loneliness]]]]</tw-passagedata><tw-passagedata pid="26" name="Anger Puzzle 1" tags="" position="1200,825" size="100,100">&#39;&#39;Puzzle 1&#39;&#39;
+[[“I can’t just sit around and wait for people to always reach out to me. Maybe I will sign up for an after school club.”|Loneliness]]]]</tw-passagedata><tw-passagedata pid="26" name="Anger Puzzle 1" tags="" position="1400,900" size="100,100">&#39;&#39;Puzzle 1&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) We see our protagonist looking at a happy family.
 
 //“It’s not fair that others have normal and such loving families.”//
 
-[[Return to $curArea.|Anger]]]</tw-passagedata><tw-passagedata pid="27" name="Anger Puzzle 2" tags="" position="1325,825" size="100,100">&#39;&#39;Puzzle 1&#39;&#39;
+[[Return to $curArea.|Anger]]]</tw-passagedata><tw-passagedata pid="27" name="Anger Puzzle 2" tags="" position="1525,900" size="100,100">&#39;&#39;Puzzle 2&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) Our protagonist stands with their backpack in their hands in front of their school, the clock shows 18:00. It is already dark outside.
 
 //“I wish that was the only time my parents forgot to pick me up. It wasn’t.”//
 
-[[Return to $curArea.|Anger]]]</tw-passagedata><tw-passagedata pid="28" name="Anger Puzzle 3" tags="" position="1325,950" size="100,100">&#39;&#39;Puzzle 1&#39;&#39;
+[[Return to $curArea.|Anger]]]</tw-passagedata><tw-passagedata pid="28" name="Anger Puzzle 3" tags="" position="1400,1025" size="100,100">&#39;&#39;Puzzle 3&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) We see our protagonist sitting in front of a desk. Their diary lies on the desk, names have been scratched out.
 
 //“Ah, yes. This was after a beat up. I imagined their names were them and tried to scratch them out as hard as I could.”//
 
-[[Return to $curArea.|Anger]]]</tw-passagedata><tw-passagedata pid="29" name="Anger Puzzle 4" tags="" position="1325,1075" size="100,100">&#39;&#39;Puzzle 4&#39;&#39;
+[[Return to $curArea.|Anger]]]</tw-passagedata><tw-passagedata pid="29" name="Anger Puzzle 4" tags="" position="1525,1025" size="100,100">&#39;&#39;Puzzle 4&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) Our protagonist’s name gets called to receive their diploma. They get up excitedly to shake hands with the professor. On the podium, we get a shot of the audience. Three empty chairs greet us.

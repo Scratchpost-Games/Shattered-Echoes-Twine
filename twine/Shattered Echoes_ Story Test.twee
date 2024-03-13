@@ -13,7 +13,7 @@ Shattered Echoes: Story Test
 
 
 :: Anger {"position":"1200,700","size":"100,100"}
-(set: $curSpiritComp to "the powerful bull 🐂")(if: (visited:"Anger Puzzle 1") is true and (visited:"Anger Puzzle 2") is true and (visited:"Anger Puzzle 3") is true and (visited:"Anger Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "anger"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "anger")[''Flowing River''
+(set: $curSpiritComp to "the powerful bull 🐂")(if: $areasCompleted does not contain "anger" and (visited:"Anger Puzzle 1") is true and (visited:"Anger Puzzle 2") is true and (visited:"Anger Puzzle 3") is true and (visited:"Anger Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "anger"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "anger")[''Flowing River''
 
 Color has returned to this area and it feels alive. The river flows again and the water is clean and fresh.](else:)[''Dried Up River''
 
@@ -34,7 +34,7 @@ Color has returned to this area and it feels alive. The river flows again and th
 (set: $curArea to "the river")
 
 
-:: Anger Puzzle 1 {"position":"1200,825","size":"100,100"}
+:: Anger Puzzle 1 {"position":"1400,900","size":"100,100"}
 ''Puzzle 1''
 (display: "Intro Puzzle")
 
@@ -45,8 +45,8 @@ Color has returned to this area and it feels alive. The river flows again and th
 [[Return to $curArea.|Anger]]]
 
 
-:: Anger Puzzle 2 {"position":"1325,825","size":"100,100"}
-''Puzzle 1''
+:: Anger Puzzle 2 {"position":"1525,900","size":"100,100"}
+''Puzzle 2''
 (display: "Intro Puzzle")
 
 |puzzle-part1)[(IMAGE) Our protagonist stands with their backpack in their hands in front of their school, the clock shows 18:00. It is already dark outside.
@@ -56,8 +56,8 @@ Color has returned to this area and it feels alive. The river flows again and th
 [[Return to $curArea.|Anger]]]
 
 
-:: Anger Puzzle 3 {"position":"1325,950","size":"100,100"}
-''Puzzle 1''
+:: Anger Puzzle 3 {"position":"1400,1025","size":"100,100"}
+''Puzzle 3''
 (display: "Intro Puzzle")
 
 |puzzle-part1)[(IMAGE) We see our protagonist sitting in front of a desk. Their diary lies on the desk, names have been scratched out.
@@ -67,7 +67,7 @@ Color has returned to this area and it feels alive. The river flows again and th
 [[Return to $curArea.|Anger]]]
 
 
-:: Anger Puzzle 4 {"position":"1325,1075","size":"100,100"}
+:: Anger Puzzle 4 {"position":"1525,1025","size":"100,100"}
 ''Puzzle 4''
 (display: "Intro Puzzle")
 
@@ -89,7 +89,7 @@ Or
 
 
 :: Anxiety {"position":"800,700","size":"100,100"}
-(set: $curSpiritComp to "the swift rabbit 🐇")(if: (visited:"Anxiety Puzzle 1") is true and (visited:"Anxiety Puzzle 2") is true and (visited:"Anxiety Puzzle 3") is true and (visited:"Anxiety Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "anxiety"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "anxiety")[''Film Studio''
+(set: $curSpiritComp to "the swift rabbit 🐇")(if: $areasCompleted does not contain "anxiety" and (visited:"Anxiety Puzzle 1") is true and (visited:"Anxiety Puzzle 2") is true and (visited:"Anxiety Puzzle 3") is true and (visited:"Anxiety Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "anxiety"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "anxiety")[''Film Studio''
 
 Color has returned to this area and it feels alive.](else:)[''Abondoned Film Studio''
 
@@ -196,7 +196,7 @@ A memory flashes through your mind. You remember what happened before you got he
 
 
 :: Grief {"position":"1200,500","size":"100,100"}
-(set: $curSpiritComp to "the keen raven 🐦‍⬛")(if: (visited:"Grief Puzzle 1") is true and (visited:"Grief Puzzle 2") is true and (visited:"Grief Puzzle 3") is true and (visited:"Grief Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "grief"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "grief")[''Power Plant''
+(set: $curSpiritComp to "the keen raven 🐦‍⬛")(if: $areasCompleted does not contain "grief" and (visited:"Grief Puzzle 1") is true and (visited:"Grief Puzzle 2") is true and (visited:"Grief Puzzle 3") is true and (visited:"Grief Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "grief"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "grief")[''Power Plant''
 
 Color has returned to this area and it feels alive. The machinery of the plant is humming softly and the lights are back on.](else:)[''Abandoned Power Plant''
 
@@ -298,7 +298,7 @@ You enter a puzzle area. There are pillars all over the place, and what seems li
 
 
 :: Joy {"position":"800,500","size":"100,100"}
-(set: $curSpiritComp to "the magnificent otter 🦦")(if: (visited:"Joy Puzzle 1") is true and (visited:"Joy Puzzle 2") is true and (visited:"Joy Puzzle 3") is true and (visited:"Joy Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "joy"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "joy")[''Vibrant Amusement Park''
+(set: $curSpiritComp to "the magnificent otter 🦦")(if: $areasCompleted does not contain "joy" and (visited:"Joy Puzzle 1") is true and (visited:"Joy Puzzle 2") is true and (visited:"Joy Puzzle 3") is true and (visited:"Joy Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "joy"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "joy")[''Vibrant Amusement Park''
 
 The rides are running again! Color has returned to this area and it feels alive.](else:)[''Dilapidated Amusement Park''
 
@@ -368,7 +368,7 @@ The rides are running again! Color has returned to this area and it feels alive.
 
 
 :: Loneliness {"position":"1000,700","size":"100,100"}
-(set: $curSpiritComp to "the wise wolf 🐺")(if: (visited:"Loneliness Puzzle 1") is true and (visited:"Loneliness Puzzle 2") is true and (visited:"Loneliness Puzzle 3") is true and (visited:"Loneliness Puzzle 4") is true and (visited:"Loneliness Puzzle 5") is true)[(set: $areasCompleted to it + (ds: "loneliness"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "loneliness")[''Lost Ruins''
+(set: $curSpiritComp to "the wise wolf 🐺")(if: $areasCompleted does not contain "loneliness" and (visited:"Loneliness Puzzle 1") is true and (visited:"Loneliness Puzzle 2") is true and (visited:"Loneliness Puzzle 3") is true and (visited:"Loneliness Puzzle 4") is true and (visited:"Loneliness Puzzle 5") is true)[(set: $areasCompleted to it + (ds: "loneliness"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "loneliness")[''Lost Ruins''
 
 Color has returned to this area and it feels alive.](else:)[''Overgrown Lost Ruins''
 
