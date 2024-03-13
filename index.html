@@ -30,7 +30,7 @@ Color has returned to this area and it feels alive.](else:)[&#39;&#39;Abondoned 
 
 [[Wander to pillar area 3|Anxiety Puzzle 3]]
 
-[[Wander to pillar area 4|Anxiety Puzzle 4]]
+(if: (visited: &quot;Anxiety Puzzle 1&quot;) is true and (visited: &quot;Anxiety Puzzle 2&quot;) is true and (visited: &quot;Anxiety Puzzle 3&quot;) is true)[[[Enter boss area|Anxiety Puzzle 4]]]
 
 (if: $areasCompleted contains &quot;anxiety&quot;)[The gates that lead back to the city park have reopened.
 
@@ -50,7 +50,7 @@ Color has returned to this area and it feels alive.](else:)[&#39;&#39;Overgrown 
 
 [[Wander to pillar area 4|Loneliness Puzzle 4]]
 
-[[Wander to pillar area 5|Loneliness Puzzle 5]]
+(if: (visited: &quot;Loneliness Puzzle 1&quot;) is true and (visited: &quot;Loneliness Puzzle 2&quot;) is true and (visited: &quot;Loneliness Puzzle 3&quot;) is true and (visited: &quot;Loneliness Puzzle 4&quot;) is true)[[[Enter boss area|Loneliness Puzzle 5]]]
 
 (if: $areasCompleted contains &quot;loneliness&quot;)[The vines that previously blocked your path back to the city park have retreated.
 
@@ -68,7 +68,7 @@ Color has returned to this area and it feels alive. The river flows again and th
 
 [[Wander to pillar area 3|Anger Puzzle 3]]
 
-[[Wander to pillar area 4|Anger Puzzle 4]]
+(if: (visited: &quot;Anger Puzzle 1&quot;) is true and (visited: &quot;Anger Puzzle 2&quot;) is true and (visited: &quot;Anger Puzzle 3&quot;) is true)[[[Enter boss area|Anger Puzzle 4]]]
 
 (if: $areasCompleted contains &quot;anger&quot;)[Water flow has returned where the bridge used to be.
 
@@ -86,7 +86,7 @@ Color has returned to this area and it feels alive. The machinery of the plant i
 
 [[Wander to pillar area 3|Grief Puzzle 3]]
 
-[[Wander to pillar area 4|Grief Puzzle 4]]
+(if: (visited: &quot;Grief Puzzle 1&quot;) is true and (visited: &quot;Grief Puzzle 2&quot;) is true and (visited: &quot;Grief Puzzle 3&quot;) is true)[[[Enter boss area|Grief Puzzle 4]]]
 
 (if: $areasCompleted contains &quot;grief&quot;)[The door of the building has reopened.
 
@@ -108,7 +108,7 @@ The rides are running again! Color has returned to this area and it feels alive.
 
 [[Wander to pillar area 3|Joy Puzzle 3]]
 
-[[Wander to pillar area 4|Joy Puzzle 4]]
+(if: (visited: &quot;Joy Puzzle 1&quot;) is true and (visited: &quot;Joy Puzzle 2&quot;) is true and (visited: &quot;Joy Puzzle 3&quot;) is true)[[[Enter boss area|Joy Puzzle 4]]]
 
 (if: $areasCompleted contains &quot;joy&quot;)[A new path has revealed itself, leading out of the amusement park.
 
@@ -144,7 +144,7 @@ The park is surrounded by five other areas: an amusement park, a film studio, a 
 
 //“It’s a miracle that I didn’t break any bones during that vacation. It was great spending some time together as a family.”//
 
-[[Return to $curArea.|Joy]]]</tw-passagedata><tw-passagedata pid="12" name="Joy Puzzle 4" tags="" position="600,700" size="100,100">&#39;&#39;Puzzle 4&#39;&#39;
+[[Return to $curArea.|Joy]]]</tw-passagedata><tw-passagedata pid="12" name="Joy Puzzle 4" tags="" position="600,700" size="100,100">&#39;&#39;Boss Area&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) A child unwraps a box (with holes in it) and sees a rabbit inside. The child’s eyes are wide and they are beaming.
@@ -197,7 +197,7 @@ The park is surrounded by five other areas: an amusement park, a film studio, a 
 
 //“I was always very self-conscious around others, trying to fit in, behave like I thought they wanted me to. It never worked.”//
 
-[[Return to $curArea.|Anxiety]]]</tw-passagedata><tw-passagedata pid="20" name="Anxiety Puzzle 4" tags="" position="725,1025" size="100,100">&#39;&#39;Puzzle 4&#39;&#39;
+[[Return to $curArea.|Anxiety]]]</tw-passagedata><tw-passagedata pid="20" name="Anxiety Puzzle 4" tags="" position="725,1025" size="100,100">&#39;&#39;Boss Area&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) A teenager stands in front of a classroom, looking embarrassed and uncomfortable. Behind them is a screen showing a presentation. A few students in the group are snickering and making fun.
@@ -236,7 +236,7 @@ The park is surrounded by five other areas: an amusement park, a film studio, a 
 
 //“I had foreseen this happening, but it still hurt.”//
 
-[[Return to $curArea.|Loneliness]]]</tw-passagedata><tw-passagedata pid="25" name="Loneliness Puzzle 5" tags="" position="1150,1025" size="100,100">&#39;&#39;Puzzle 5&#39;&#39;
+[[Return to $curArea.|Loneliness]]]</tw-passagedata><tw-passagedata pid="25" name="Loneliness Puzzle 5" tags="" position="1150,1025" size="100,100">&#39;&#39;Boss Area&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) We see our protagonist sitting on a bed, surrounded by boxes, a phone in their hands. 0 notifications.
@@ -268,7 +268,7 @@ The park is surrounded by five other areas: an amusement park, a film studio, a 
 
 //“Ah, yes. This was after a beat up. I imagined their names were them and tried to scratch them out as hard as I could.”//
 
-[[Return to $curArea.|Anger]]]</tw-passagedata><tw-passagedata pid="29" name="Anger Puzzle 4" tags="" position="1525,1025" size="100,100">&#39;&#39;Puzzle 4&#39;&#39;
+[[Return to $curArea.|Anger]]]</tw-passagedata><tw-passagedata pid="29" name="Anger Puzzle 4" tags="" position="1525,1025" size="100,100">&#39;&#39;Boss Area&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) Our protagonist’s name gets called to receive their diploma. They get up excitedly to shake hands with the professor. On the podium, we get a shot of the audience. Three empty chairs greet us.
@@ -306,7 +306,7 @@ Or
 
 //“Sometimes I wonder how different my life would have been if I wasn’t so.. like me.”//
 
-[[Return to $curArea.|Grief]]]</tw-passagedata><tw-passagedata pid="33" name="Grief Puzzle 4" tags="" position="1525,625" size="100,100">&#39;&#39;Puzzle 4&#39;&#39;
+[[Return to $curArea.|Grief]]]</tw-passagedata><tw-passagedata pid="33" name="Grief Puzzle 4" tags="" position="1525,625" size="100,100">&#39;&#39;Boss Area&#39;&#39;
 (display: &quot;Intro Puzzle&quot;)
 
 |puzzle-part1)[(IMAGE) We see our protagonist at the vet, our beloved pet laying on the table in the middle of the room. The vet places a hand on our protagonist’s shoulder, as a tear escapes our protagonist’s eye.

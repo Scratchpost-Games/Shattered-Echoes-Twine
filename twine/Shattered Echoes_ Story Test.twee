@@ -25,7 +25,7 @@ Color has returned to this area and it feels alive. The river flows again and th
 
 [[Wander to pillar area 3|Anger Puzzle 3]]
 
-[[Wander to pillar area 4|Anger Puzzle 4]]
+(if: (visited: "Anger Puzzle 1") is true and (visited: "Anger Puzzle 2") is true and (visited: "Anger Puzzle 3") is true)[[[Enter boss area|Anger Puzzle 4]]]
 
 (if: $areasCompleted contains "anger")[Water flow has returned where the bridge used to be.
 
@@ -68,7 +68,7 @@ Color has returned to this area and it feels alive. The river flows again and th
 
 
 :: Anger Puzzle 4 {"position":"1525,1025","size":"100,100"}
-''Puzzle 4''
+''Boss Area''
 (display: "Intro Puzzle")
 
 |puzzle-part1)[(IMAGE) Our protagonist’s name gets called to receive their diploma. They get up excitedly to shake hands with the professor. On the podium, we get a shot of the audience. Three empty chairs greet us.
@@ -101,7 +101,7 @@ Color has returned to this area and it feels alive.](else:)[''Abondoned Film Stu
 
 [[Wander to pillar area 3|Anxiety Puzzle 3]]
 
-[[Wander to pillar area 4|Anxiety Puzzle 4]]
+(if: (visited: "Anxiety Puzzle 1") is true and (visited: "Anxiety Puzzle 2") is true and (visited: "Anxiety Puzzle 3") is true)[[[Enter boss area|Anxiety Puzzle 4]]]
 
 (if: $areasCompleted contains "anxiety")[The gates that lead back to the city park have reopened.
 
@@ -144,7 +144,7 @@ Color has returned to this area and it feels alive.](else:)[''Abondoned Film Stu
 
 
 :: Anxiety Puzzle 4 {"position":"725,1025","size":"100,100"}
-''Puzzle 4''
+''Boss Area''
 (display: "Intro Puzzle")
 
 |puzzle-part1)[(IMAGE) A teenager stands in front of a classroom, looking embarrassed and uncomfortable. Behind them is a screen showing a presentation. A few students in the group are snickering and making fun.
@@ -208,7 +208,7 @@ Color has returned to this area and it feels alive. The machinery of the plant i
 
 [[Wander to pillar area 3|Grief Puzzle 3]]
 
-[[Wander to pillar area 4|Grief Puzzle 4]]
+(if: (visited: "Grief Puzzle 1") is true and (visited: "Grief Puzzle 2") is true and (visited: "Grief Puzzle 3") is true)[[[Enter boss area|Grief Puzzle 4]]]
 
 (if: $areasCompleted contains "grief")[The door of the building has reopened.
 
@@ -251,7 +251,7 @@ Color has returned to this area and it feels alive. The machinery of the plant i
 
 
 :: Grief Puzzle 4 {"position":"1525,625","size":"100,100"}
-''Puzzle 4''
+''Boss Area''
 (display: "Intro Puzzle")
 
 |puzzle-part1)[(IMAGE) We see our protagonist at the vet, our beloved pet laying on the table in the middle of the room. The vet places a hand on our protagonist’s shoulder, as a tear escapes our protagonist’s eye.
@@ -310,7 +310,7 @@ The rides are running again! Color has returned to this area and it feels alive.
 
 [[Wander to pillar area 3|Joy Puzzle 3]]
 
-[[Wander to pillar area 4|Joy Puzzle 4]]
+(if: (visited: "Joy Puzzle 1") is true and (visited: "Joy Puzzle 2") is true and (visited: "Joy Puzzle 3") is true)[[[Enter boss area|Joy Puzzle 4]]]
 
 (if: $areasCompleted contains "joy")[A new path has revealed itself, leading out of the amusement park.
 
@@ -353,7 +353,7 @@ The rides are running again! Color has returned to this area and it feels alive.
 
 
 :: Joy Puzzle 4 {"position":"600,700","size":"100,100"}
-''Puzzle 4''
+''Boss Area''
 (display: "Intro Puzzle")
 
 |puzzle-part1)[(IMAGE) A child unwraps a box (with holes in it) and sees a rabbit inside. The child’s eyes are wide and they are beaming.
@@ -382,7 +382,7 @@ Color has returned to this area and it feels alive.](else:)[''Overgrown Lost Rui
 
 [[Wander to pillar area 4|Loneliness Puzzle 4]]
 
-[[Wander to pillar area 5|Loneliness Puzzle 5]]
+(if: (visited: "Loneliness Puzzle 1") is true and (visited: "Loneliness Puzzle 2") is true and (visited: "Loneliness Puzzle 3") is true and (visited: "Loneliness Puzzle 4") is true)[[[Enter boss area|Loneliness Puzzle 5]]]
 
 (if: $areasCompleted contains "loneliness")[The vines that previously blocked your path back to the city park have retreated.
 
@@ -436,7 +436,7 @@ Color has returned to this area and it feels alive.](else:)[''Overgrown Lost Rui
 
 
 :: Loneliness Puzzle 5 {"position":"1150,1025","size":"100,100"}
-''Puzzle 5''
+''Boss Area''
 (display: "Intro Puzzle")
 
 |puzzle-part1)[(IMAGE) We see our protagonist sitting on a bed, surrounded by boxes, a phone in their hands. 0 notifications.
