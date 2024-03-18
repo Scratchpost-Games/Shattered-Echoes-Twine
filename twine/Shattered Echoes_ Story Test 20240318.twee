@@ -1,10 +1,10 @@
 :: StoryTitle
-Shattered Echoes: Story Test
+Shattered Echoes: Story Test 20240318
 
 
 :: StoryData
 {
-  "ifid": "a2a88c28-1391-4b54-9baf-c504974de654",
+  "ifid": "f2814678-2de2-4a94-a262-d9f4647c0757",
   "format": "Harlowe",
   "format-version": "3.3.8",
   "start": "Start",
@@ -29,7 +29,7 @@ Color has returned to this area and it feels alive. The river flows again and th
 
 (if: $areasCompleted contains "anger")[Water flow has returned where the bridge used to be.
 
-[[Evoke the otter and swim across.|City Park]]]
+[[Evoke the dog and swim across.|City Park]]]
 
 (set: $curArea to "the river")
 
@@ -157,19 +157,19 @@ Color has returned to this area and it feels alive.](else:)[''Abondoned Film Stu
 
 (if: $areasToComplete is 0)[The park is bright. Brighter than you've ever seen it before. In fact, it grows more bright with every passing moment. Eventually, you see nothing around you except a white void.
 
-[[What is happening|Hospital]]](else:)[(if: visits is 1)[You arrive at a small park in the center of the city. Suddenly, an intense memory strikes you. You panic. You drop to your knees as your emotions overwhelm you. You see blue light again, this time bursting from your body and scattering away to neighboring areas. ](if: $areasCompleted is (ds: "joy"))[The small park at the center of the city is abondoned, save for a few shadowy figures moving about in the distance. You feel it would be best to not alert them to your presence. A tree with a broken down treehouse stands in the middle of the park.](else:)[The small park at the center of the city is feels a bit more alive. The treehouse has been partially fixed. ](if: $areasCompleted contains "anxiety")[The area seems less gloomy and you no longer feel afraid that something is going to jump at you from the bushes. ](if: $areasCompleted contains "anger")[The little ponds in the park are filled with fresh, clean water again. ](if: $areasCompleted contains "loneliness")[The overgrown vines and bushes in the park have been neatly trimmed. ](if: $areasCompleted contains "grief")[The lights in the treehouse are on, and so are the lights in the city surrounding the park. ]
+[[What is happening|Hospital]]](else:)[(if: visits is 1)[You arrive at a small park in the center of the city. Suddenly, an intense memory strikes you. You panic. You drop to your knees as your emotions overwhelm you. You see blue bursting from your body and scattering away to neighboring areas. The dog looks at you quizzically, and after a short while trots off towards an area with pillars nearby. ](if: $areasCompleted is (ds:))[The small park at the center of the city is abondoned, save for a few shadowy figures moving about in the distance. You feel it would be best to not alert them to your presence. A tree with a broken down treehouse stands in the middle of the park.](else:)[The small park at the center of the city is feels a bit more alive. The treehouse has been partially fixed. ](if: $areasCompleted contains "anxiety")[The area seems less gloomy and you no longer feel afraid that something is going to jump at you from the bushes. ](if: $areasCompleted contains "anger")[The little ponds in the park are filled with fresh, clean water again. ](if: $areasCompleted contains "loneliness")[The overgrown vines and bushes in the park have been neatly trimmed. ](if: $areasCompleted contains "grief")[The lights in the treehouse are on, and so are the lights in the city surrounding the park. ]
 
-The park is surrounded by five other areas: an amusement park, a film studio, a river, some ruins, and a power plant.
+The park contains a few areas with pillars in it, and is surrounded by four other areas: a film studio, a river, some ruins, and a power plant.
 
-[[Walk to the amusement park.|Joy]]
+[[Walk to the pillar areas.|Joy]]
 
-[[Walk to the film studio.|Anxiety]]
+(if: $areasCompleted contains "joy")[[[Walk to the film studio.|Anxiety]]
 
 [[Walk to the river.|Anger]]
 
 [[Walk to the ruins.|Loneliness]]
 
-[[Walk to the power plant.|Grief]]]
+[[Walk to the power plant.|Grief]]]]
 
 
 :: Debug Startup [debug-startup] {"position":"600,100","size":"100,100"}
@@ -261,7 +261,7 @@ Color has returned to this area and it feels alive. The machinery of the plant i
 
 :: Header [header] {"position":"1000,100","size":"100,100"}
 {(align:"==>")[Companions: 
-(if: $companions contains "otter")[🦦]
+(if: $companions contains "dog")[🐶]
 (if: $companions contains "rabbit")[🐇]
 (if: $companions contains "bull")[🐂]
 (if: $companions contains "wolf")[🐺]
@@ -292,11 +292,9 @@ You enter a puzzle area. There are pillars all over the place, and what seems li
 
 
 :: Joy {"position":"800,500","size":"100,100"}
-(set: $curSpiritComp to "the magnificent otter 🦦")(if: $areasCompleted does not contain "joy" and (visited:"Joy Puzzle 1") is true and (visited:"Joy Puzzle 2") is true and (visited:"Joy Puzzle 3") is true and (visited:"Joy Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "joy"))(set: $areasToComplete to it - 1)](if: $areasCompleted contains "joy")[''Vibrant Amusement Park''
+(if: $areasCompleted does not contain "joy" and (visited:"Joy Puzzle 1") is true and (visited:"Joy Puzzle 2") is true and (visited:"Joy Puzzle 3") is true and (visited:"Joy Puzzle 4") is true)[(set: $areasCompleted to it + (ds: "joy"))(set: $areasToComplete to it - 1)]''Center of pillar areas''
 
-The rides are running again! Color has returned to this area and it feels alive.](else:)[''Dilapidated Amusement Park''
-
-(if: $companions does not contain "otter")[The otter leads you to a dilapidated amusement park. The rides are rusted and look like they haven't been used in a long time. In the distance you see several areas with pillars in them. The otter approaches you. You kneel down, beckoning it to come closer. It does. You reach out to pet it. The moment you touch the otter, it starts glowing in a blue light. You withdraw your hand, startled. The otter morphs into a ball of blue light, which quickly zooms towards you and collides with your chest. Then it's gone. You look around, confused. You feel a bit different.(set: $companions to it + (ds: "otter"))](else:)[You are back at the amusement park. The rides are rusted and look like they haven't been used in a long time. In the distance you see several areas with pillars in them.]]
+(if: $companions does not contain "dog")[The dog leads you to the center of pillar areas. The dog approaches you. You kneel down, beckoning it to come closer. It does. You reach out to pet it. The moment you touch the dog, it starts glowing in a blue light. You withdraw your hand, startled. The dog morphs into a ball of blue light, which quickly zooms towards you and collides with your chest. Then it's gone. You look around, confused. You feel a bit different.(set: $companions to it + (ds: "dog"))](else:)[You are back at the center of the pillar areas. In the distance you see several areas with pillars in them.]
 
 [[Wander to pillar area 1|Joy Puzzle 1]]
 
@@ -306,11 +304,12 @@ The rides are running again! Color has returned to this area and it feels alive.
 
 (if: (visited: "Joy Puzzle 1") is true and (visited: "Joy Puzzle 2") is true and (visited: "Joy Puzzle 3") is true)[[[Enter boss area|Joy Puzzle 4]]]
 
-(if: $areasCompleted contains "joy")[A new path has revealed itself, leading out of the amusement park.
+(if: $areasCompleted contains "joy")[A new path has revealed itself, leading back to the city park.
 
-[[Take the path to the next area.|City Park]]]
+[[Take the path to the city park.|City Park]]]
 
-(set: $curArea to "amusement park")
+(set: $curArea to "center of pillar areas")
+(set: $curSpiritComp to "the happy dog 🐶")
 
 
 :: Joy Puzzle 1 {"position":"600,400","size":"100,100"}
@@ -452,9 +451,9 @@ You stand up and look around. The world doesn’t look quite right.
 
 (link:"\"Where am I? How did I get here?\"")[(t8n:"dissolve")(show:?discover-creature)]|discover-creature)[//"Where am I? How did I get here?"//
 
-You look around once again and spot a small creature scurrying around. It appears to be an otter. It approaches you and makes a little circle around you, after which it moves to a direction, beckoning you to follow them.
+You look around once again and spot a small creature scurrying around. It appears to be a dog. It approaches you and makes a little circle around you, after which it moves to a direction, beckoning you to follow them.
 
-[[“You want me to follow you, little one?”|Joy]]]
+[[“You want me to follow you, little one?”|City Park]]]
 
 
 :: Startup [startup] {"position":"800,100","size":"100,100"}
